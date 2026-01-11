@@ -5,12 +5,14 @@
   box-sizing: border-box;
 }
 
-html,
 body {
   margin: 0;
   font-family: "Poppins", sans-serif;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-color: #020617;
+  background-image: radial-gradient(at 0% 0%, hsla(215, 94%, 15%, 1) 0, transparent 50%),
+    radial-gradient(at 100% 0%, hsla(215, 94%, 15%, 1) 0, transparent 50%);
   min-height: 100vh;
+  color: #f8fafc;
 }
 
 /* Typography */
@@ -39,15 +41,17 @@ h2 {
 
 h3 {
   margin: 25px;
-  color: #333;
+  color: #f1f5f9;
   font-weight: 600;
 }
 
 /* Header */
 header {
-  background: rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(10px);
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: 20px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .header-inner {
@@ -66,13 +70,16 @@ header {
 
 /* Main Content */
 main {
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   margin: 40px auto;
   width: 90%;
   max-width: 500px;
   border-radius: 20px;
   padding: 30px;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Controls */
@@ -86,7 +93,7 @@ main {
 .mood-radios {
   display: flex;
   flex-direction: column;
-  border: 2px solid #e0e0e0;
+  border: 2px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 20px;
@@ -95,10 +102,10 @@ main {
 .radio {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
   padding: 12px 16px;
   transition: all 0.3s ease;
-  background: white;
+  background: transparent;
 }
 
 .radio:last-child {
@@ -106,7 +113,7 @@ main {
 }
 
 .radio:hover {
-  background-color: #f8f9ff;
+  background-color: rgba(6, 182, 212, 0.05);
 }
 
 .radio label {
@@ -119,8 +126,8 @@ main {
 }
 
 .highlight {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+  color: #ffffff;
   font-weight: 600;
 }
 
@@ -131,7 +138,7 @@ main {
 input[type="radio"] {
   cursor: pointer;
   margin-right: 10px;
-  accent-color: #667eea;
+  accent-color: #06b6d4;
 }
 
 /* Checkbox */
@@ -141,25 +148,26 @@ input[type="radio"] {
   justify-content: center;
   margin: 20px 0;
   padding: 15px;
-  background: rgba(102, 126, 234, 0.1);
+  background: rgba(6, 182, 212, 0.1);
   border-radius: 10px;
+  border: 1px solid rgba(6, 182, 212, 0.2);
 }
 
 .classics-check-label {
   margin-right: 10px;
   font-weight: 500;
-  color: #333;
+  color: #cbd5e1;
 }
 
 input[type="checkbox"] {
   cursor: pointer;
-  accent-color: #667eea;
+  accent-color: #06b6d4;
   transform: scale(1.2);
 }
 
 /* Button */
 .get-movie-btn {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
   color: white;
   padding: 18px 24px;
   font-size: 20px;
@@ -168,7 +176,7 @@ input[type="checkbox"] {
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
-  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
+  box-shadow: 0 8px 20px rgba(6, 182, 212, 0.3);
 }
 
 .get-movie-btn:hover {
@@ -196,7 +204,8 @@ input[type="checkbox"] {
 }
 
 .movie-modal-content {
-  background: white;
+  background: #0f172a;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   padding: 30px;
   max-width: 500px;
@@ -204,7 +213,7 @@ input[type="checkbox"] {
   max-height: 90vh;
   overflow-y: auto;
   position: relative;
-  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
 }
 
 .movie-modal-close-btn {
@@ -241,21 +250,21 @@ input[type="checkbox"] {
 .movie-title {
   font-size: 24px;
   font-weight: 800;
-  color: #333;
+  color: #f8fafc;
   text-align: center;
   margin-bottom: 10px;
 }
 
 .movie-details {
   text-align: center;
-  color: #666;
+  color: #94a3b8;
   font-size: 16px;
   margin-bottom: 8px;
 }
 
 .movie-genre {
   display: inline-block;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
   color: white;
   padding: 5px 15px;
   border-radius: 20px;
